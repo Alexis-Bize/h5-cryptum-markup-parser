@@ -13,5 +13,9 @@
         "cryptum",
         "halo 5",
         "zeny"
-    ]
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Alexis-Bize/h5-cryptum-markup-parser"
+    }
 }
