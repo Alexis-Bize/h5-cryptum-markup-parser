@@ -1,7 +1,7 @@
 {
     "name": "h5-cryptum-markup-parser",
     "description": "Convert .bin markup files to JSON",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "author": "Alexis 'Zeny' Bize <alexis.bize@gmail.com>",
     "license": "MIT",
     "dependencies": {
