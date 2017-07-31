@@ -24,11 +24,6 @@ MarkupParser.readFile((err, result) => {
     console.log(err, result);
 });
 ```
-Via `command line`:
-```ssh
-$ npm install h5-cryptum-markup-parser -g
-$ h5-cryptum-markup-parser -f path/to/markup_file.bin -o path/output -e utf-8
-```
 
 ### Want to contribute?
 Feel free to open a pull request on [GitHub](https://github.com/Alexis-Bize/h5-cryptum-markup-parser)!
