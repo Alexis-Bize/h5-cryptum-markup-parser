@@ -1,16 +1,26 @@
 {
     "name": "h5-cryptum-markup-parser",
     "description": "Convert .bin markup files to JSON",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "author": "Alexis 'Zeny' Bize <alexis.bize@gmail.com>",
     "license": "MIT",
     "dependencies": {
-        "buffer-split": "1.0.x",
-        "buffer-indexof": "1.1.x"
+        "buffer-split": "1.0.x"
+    },
+    "main": "./build/index.js",
+    "scripts": {
+        "build": "babel ./src --out-dir ./build",
+        "prepare": "npm run build"
+    },
+    "devDependencies": {
+        "babel-cli": "6.24.x",
+        "babel-preset-es2015": "6.24.x",
+        "babel-preset-stage-0": "6.24.x"
     },
     "keywords": [
         "cryptum",
         "halo 5",
+        "xbox",
         "zeny"
     ],
     "repository": {

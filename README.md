@@ -9,19 +9,18 @@ Once converted, each value for each setting is human-readable and may be used in
 
 ### How can I retrive a markup?
 Everything you need might be found on the [content-hacs API](https://content-hacs.svc.halowaypoint.com/contents/GameVariantDefinition).
-Few examples: [Slayer Markup (EN)](https://content.halocdn.com/media/Default/Hopper-Files/Generated/94054-17-07-06-2300-0/EditableOptionsDefinition/Slayer_CustomGamesUIMarkup_en.bin), [Capture The Flag (EN)](https://content.halocdn.com/media/Default/Hopper-Files/Generated/94054-17-07-06-2300-0/EditableOptionsDefinition/CaptureTheFlag_CustomGamesUIMarkup_en.bin), and [Strongholds (FR)](https://content.halocdn.com/media/Default/Hopper-Files/Generated/94054-17-07-06-2300-0/EditableOptionsDefinition/Strongholds_CustomGamesUIMarkup_fr.bin).
+Few examples: [Slayer Markup (EN)](https://content.halocdn.com/media/Default/Hopper-Files/Generated/94054-17-07-06-2300-0/EditableOptionsDefinition/Slayer_CustomGamesUIMarkup_en.bin), [Capture The Flag Markup (EN)](https://content.halocdn.com/media/Default/Hopper-Files/Generated/94054-17-07-06-2300-0/EditableOptionsDefinition/CaptureTheFlag_CustomGamesUIMarkup_en.bin), and [Strongholds Markup (FR)](https://content.halocdn.com/media/Default/Hopper-Files/Generated/94054-17-07-06-2300-0/EditableOptionsDefinition/Strongholds_CustomGamesUIMarkup_fr.bin).
 
 ### Documentation
-Via `require`:
 ```javascript
 var MarkupParser = require('h5-cryptum-markup-parser');
 
-MarkupParser.setFilePath('path/to/markup_file.bin');
-MarkupParser.setOutputFolder('path/output'); // Not mandatory - View only
-MarkupParser.setFileEncoding('utf-8'); // Not mandatory - Default
-
-MarkupParser.readFile((err, result) => {
-    console.log(err, result);
+MarkupParser
+.setFilePath('path/markup_file.bin');
+.setOutputFolder('path/output'); // Not mandatory
+.setFileEncoding('utf-8'); // Not mandatory
+.readFile(function(err, result) {
+    console.log(err, result)
 });
 ```
 
