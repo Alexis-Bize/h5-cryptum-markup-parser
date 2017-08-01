@@ -6,7 +6,7 @@ class CryptumMarkupParser
 {
     static defaultFilePath = null
     static defaultFileEncoding = 'utf-8'
-    static defaultOutputPath = null
+    static defaultOutputFolder = null
     static defaultCleanStringRegExp = /[^0-9a-zA-Zéêèàâùûçòô'%\[\]\-\+ ]/gi
 
     static nodeTypeSubmenu = 'submenu'
@@ -15,13 +15,13 @@ class CryptumMarkupParser
     constructor() {
         this.filePath = CryptumMarkupParser.defaultFilePath;
         this.fileEncoding = CryptumMarkupParser.defaultFileEncoding;
-        this.outputPath = CryptumMarkupParser.defaultOutputPath;
+        this.outputFolder = CryptumMarkupParser.defaultOutputFolder;
         this.cleanStringRegExp = CryptumMarkupParser.defaultCleanStringRegExp;
     }
 
     getFilePath = () => this.filePath
     getFileEncoding = () => this.fileEncoding
-    getOutputPath = () => this.outputPath
+    getOutputFolder = () => this.outputFolder
     getCleanStringRegExp = () => this.cleanStringRegExp
     getAllIndexes = (arr, values) => {
 
@@ -46,8 +46,8 @@ class CryptumMarkupParser
         return this;
     }
 
-    setOutputPath = (path = CryptumMarkupParser.defaultOutputPath) => {
-        this.outputPath = path;
+    setOutputFolder = (folder = CryptumMarkupParser.defaultOutputFolder) => {
+        this.outputFolder = folder;
         return this;
     }
 
@@ -206,7 +206,7 @@ class CryptumMarkupParser
 
                 }
 
-                if (null === this.getOutputPath()) {
+                if (null === this.getOutputFolder()) {
                     return cb(null, SettingsOutput);
                 }
                 
@@ -214,7 +214,7 @@ class CryptumMarkupParser
                     
                     fs.writeFileSync(
                         join(
-                            this.getOutputPath(),
+                            this.getOutputFolder(),
                             this.createOutputFileName()
                         ),
                         JSON.stringify(
