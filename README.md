@@ -16,11 +16,11 @@ Few examples: [Slayer Markup (EN)](https://content.halocdn.com/media/Default/Hop
 var MarkupParser = require('h5-cryptum-markup-parser').default;
 
 MarkupParser
-.setFilePath('path/markup_file.bin');
-.setOutputFolder('path/output'); // Not mandatory
-.setFileEncoding('utf-8'); // Not mandatory
+.setFilePath('path/markup_file.bin')
+.setOutputFolder('path/output') // Not mandatory
+.setFileEncoding('utf-8') // Not mandatory
 .readFile(function(err, result) {
-    console.log(err, result)
+    console.log(err, result);
 });
 ```
 
