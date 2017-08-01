@@ -13,7 +13,7 @@ Few examples: [Slayer Markup (EN)](https://content.halocdn.com/media/Default/Hop
 
 ### Documentation
 ```javascript
-var MarkupParser = require('h5-cryptum-markup-parser');
+var MarkupParser = require('h5-cryptum-markup-parser').default;
 
 MarkupParser
 .setFilePath('path/markup_file.bin');
